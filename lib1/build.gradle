@@ -1,0 +1,15 @@
+apply from: "$gradle.ext.projectSettingsDir/common_library_config.gradle"
+
+dependencies {
+    implementation 'androidx.annotation:annotation:' + androidxAnnotationVersion
+    testImplementation 'junit:junit:' + junitVersion
+    androidTestImplementation 'androidx.test.ext:junit:' + androidxTestJUnitVersion
+    androidTestImplementation 'androidx.test.espresso:espresso-core:' + androidxTestEspressoVersion
+}
+
+ext {
+    releaseArtifactId = 'lib1'
+    releaseName = 'Lib1 module'
+}
+
+apply from: '../publish.gradle'
